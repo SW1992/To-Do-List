@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="toDoApp"> 
+  <head>   
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">    
+  </head>  
+  <body>     
+    <!-- App header -->     
+    <header class="header"> 
+      <h1 class="header__title text-center">To Do List</h1>   
+    </header>     
+    <!-- App Body -->    
+    <section class="body">  
+      <div class="body__wrapper" ng-controller="toDoCtrl">
+        <form name="form" ng-submit="addItem()">
+           <input class="body__input" type="text" name="newItem" ng-model="newItem" required>
+           <button class="btn" ng-disabled="form.$invalid">Add Item</button>            
+        </form>   
+        <button class="btn" ng-click="clearMarked()">Clear Marked</button>
+        <ol>   
+          <li ng-repeat="item in toDoArr">
+            <div class="body__todos">             
+              <input type="checkbox" ng-model="item.completed"> 
+              <span ng-class="{'completed': item.completed}">{{item.title}}</span>
+            </div>  
+          </li>                            
+        </ol> 
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

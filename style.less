@@ -1,0 +1,40 @@
+@baby-blue: #6599FF; 
+@center-block: 0 auto;
+html,body { 
+  background: url(https://pixabay.com/static/uploads/photo/2016/05/20/14/14/open-spiral-notebook-1405082_960_720.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: @baby-blue;
+}   
+ol {
+  list-style-type: none;
+  padding-left: 0;     
+}
+.completed { 
+  text-decoration: line-through;
+} 
+.btn:hover, .btn:active {
+  color: @baby-blue;    
+}  
+.btn {
+  display: block;
+  width: 8em;
+  margin: @center-block;
+  margin-bottom: 1em; 
+}
+.body__input {
+  display: block; 
+  margin: @center-block;
+  margin-bottom: 1em;  
+}  
+.body__todos {
+  border: 1px solid @baby-blue;
+  height: 3.125em; 
+  width: 12.5em;
+  margin: @center-block;
+  margin-bottom: 0.25em;
+  padding-left: 0.125em;
+}
+
